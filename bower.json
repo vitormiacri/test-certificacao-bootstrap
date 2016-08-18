@@ -1,0 +1,29 @@
+{
+  "name": "certificacao-boostrap",
+  "description": "Curso bootstrap",
+  "main": "index.js",
+  "authors": [
+    "Vitor Morelli"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "curso",
+    "bootstrap"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.3",
+    "components-font-awesome": "^4.6.3"
+  },
+  "devDependencies": {
+    "tether": "^1.3.2"
+  }
+}

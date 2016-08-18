@@ -1,0 +1,22 @@
+$theme-pink: true;
+
+@if $theme-pink{
+	//theme pink
+	$header-menu-background-color: #0083e9;
+	$active-menu-color: #ed448f;
+	$hover-menu-color: #455a64;
+	$background-menu-color: #344750;
+	$font-menu-color: #98a1a6;
+	$header-username-color: #344750;
+} @else {
+	//theme blue
+	$header-menu-background-color: #384655;
+	$active-menu-color: #59c2e6;
+	$hover-menu-color: #455a64;
+	$background-menu-color: #4c5e70;
+	$font-menu-color: #a5aeb7;	
+	$header-username-color: #7b8da0;
+}
+$header-background-color: #e0e0e0;
+$body-font-color: #73909d;
+$status-color: #00d097;

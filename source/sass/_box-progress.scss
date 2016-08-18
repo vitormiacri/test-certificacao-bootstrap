@@ -1,0 +1,49 @@
+.box-progress{
+	@extend .card;
+	@extend .col-xs-12;
+	margin-bottom: 1rem;
+	.progress-title{
+		font-size: 1.1rem;
+		padding-top: 1.5rem;
+		margin-bottom: 0;
+	}
+	.progress-subtitle{
+		color: $body-font-color;
+		font-size: .825rem;
+	}
+	.total-value{
+		display: block;
+		text-align: center;
+		font-size: 1.8rem;
+	}
+	.progress-item-right{
+		float: right;
+		margin-top: -1rem;
+		.progress-text{
+			font-size: .7rem;
+		}
+	}
+	.progress-footer{
+		font-size: .825rem;
+		color: $body-font-color;
+		padding: 1rem;
+		
+	}
+
+	.progress-body{
+		@extend .card-block;
+		.progress-img{
+			@extend .img-fluid;
+		}
+
+	}
+	@media (min-width: map-get($grid-breakpoints, lg)){
+		.progress-footer{	
+			padding-top: 2.5rem;
+		}
+		.total-value{
+			padding: 2rem;
+		}
+	}
+	
+}

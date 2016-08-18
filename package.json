@@ -1,0 +1,20 @@
+{
+  "name": "certificacao-boostrap",
+  "version": "1.0.0",
+  "description": "Curso bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "curso",
+    "bootstrap"
+  ],
+  "author": "Vitor Morelli",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.2.0"
+  }
+}

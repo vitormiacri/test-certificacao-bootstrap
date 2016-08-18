@@ -1,0 +1,78 @@
+.header-top{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-height: 64px;
+	background-color: $header-background-color;
+	z-index: 1;
+	padding: 1rem;
+	padding-left: 0;
+	padding-right: 0;
+	.header-left,
+	.header-right{
+		@extend .col-xs-6;
+	}
+	.header-link{
+		margin-left: .8rem;
+		color: $body-font-color;
+		font-size: 1.125rem;
+		>i{
+			margin-right: .525rem;
+			font-size: 1.2rem;
+		}
+	}
+	.header-right{
+		text-align: right;
+		.container-alert{
+			position: relative;
+			text-align: right;
+			display: inline-block;
+			margin-right: .8rem;
+			>i{
+				font-weight: bold;
+				font-size: 1.2rem;
+				line-height: 2rem;
+			}
+			.badge-messages{
+				@extend .tag;
+				@extend .tag-pill;
+				@extend .tag-primary;
+				font-size: .7rem;
+				position: absolute;
+				top: -5px;
+				right: -8px;
+
+			}
+		}
+		.header-username,
+		.header-user-thumbnail{
+			display: none;
+			@media (min-width: map-get($grid-breakpoints, md)){
+				display: inline-block;				
+			}
+		}
+		.header-user-thumbnail{
+			width: 35px;
+		    height: 35px;
+		    border-radius: 50%;
+		    text-align: center;
+		    vertical-align: top;
+		    background: darken($background-menu-color, 1%);
+		    padding-top: .4rem;
+		    color: #fff;
+		    font-weight: bold;
+		}
+		.header-username{
+			padding-left: 1rem;
+		    font-size: 1rem;
+		    padding-right: .5rem;
+		    border-left: 1px solid $body-font-color;
+			color: $body-font-color;
+			>i{
+				font-size: .9rem;
+			}
+		}
+		
+	}
+}

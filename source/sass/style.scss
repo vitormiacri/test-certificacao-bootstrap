@@ -1,0 +1,24 @@
+@import "../components/bootstrap/scss/bootstrap.scss";
+@import "../components/components-font-awesome/scss/font-awesome.scss";
+@import "variables";
+@import "menu";
+@import "header-top";
+@import "section-header";
+@import "box-progress";
+@import "box-sumary";
+@import "current-status";
+@import "profile-info";
+
+@media (min-width: map-get($grid-breakpoints, lg)){
+	.container-lg{
+		@include createColumn(9, 'lg');
+		@include clearfix();
+		margin-left: percentage(3/12);
+		padding-left: 1rem;
+	}
+}
+@media (min-width: map-get($grid-breakpoints, xl)){
+	.container-lg{
+		padding-left: 0;
+	}
+}

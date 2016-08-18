@@ -1,0 +1,100 @@
+.box-sumary{
+	@extend .card;
+	@extend .col-xs-12;
+	margin-bottom: 1rem;
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+	.box-sumary-item{
+		float: left;
+		border-bottom: 3px solid $body-bg;
+		width: 100%;
+		.container-sumary-text{
+			@extend .col-xs-5;
+			margin-top: 2rem;
+    		padding-left: 1.6rem;
+			.sumary-item-text{
+				display: block;
+				font-size: 1.5rem;
+			}
+			.sumary-item-subtext{
+				font-size: .8rem;
+				color: $body-font-color;
+			}
+			@media (min-width: map-get($grid-breakpoints, md)){
+				@include createColumn(6, 'md');
+				.sumary-item-text{
+					font-size: 1.8rem;
+				}
+				.sumary-item-subtext{
+					font-size: 1rem;
+				}
+			}
+		}
+		.container-sumary-img{
+			@extend .col-xs-7;
+			@extend .card-block;
+			.sumary-img{
+				@extend .img-fluid;
+				padding-left: 1rem;
+			}
+			@media (min-width: map-get($grid-breakpoints, md)){
+				@include createColumn(6, 'md');
+			}
+		}
+		&:first-of-type{
+			.container-sumary-text{
+				margin-top: 2.2rem;
+			}
+		}
+		&:last-of-type{
+			border-bottom: none;
+			padding-bottom: 1rem;
+		}
+		@media (min-width: map-get($grid-breakpoints, lg)){
+			padding: 1.4rem;
+			.container-sumary-text{
+				margin-top: 0;
+				padding: 0;
+				.sumary-item-text{
+					font-size: 1.1rem;
+				}
+				.sumary-item-subtext{
+					font-size: .8rem;
+				}
+			}
+			&:first-of-type{
+				.container-sumary-text{
+					margin-top: .5rem;
+					padding: 0;
+				}
+			}
+			.container-sumary-img{
+				padding: 0;
+			}
+		}
+		@media (min-width: map-get($grid-breakpoints, xl)){
+			padding: 1.4rem;
+			.container-sumary-text{
+				margin-top: 1rem;
+				padding: 0;
+
+				.sumary-item-text{
+					font-size: 1.1rem;
+				}
+				.sumary-item-subtext{
+					font-size: .8rem;
+				}
+			}
+			&:first-of-type{
+				.container-sumary-text{
+					margin-top: 1.5rem;
+					padding: 0;
+				}
+			}
+			.container-sumary-img{
+				padding: 0;
+			}
+		}
+	}
+}

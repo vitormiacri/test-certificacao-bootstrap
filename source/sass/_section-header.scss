@@ -1,0 +1,98 @@
+.section-box-progress{
+	padding: 0 .5rem;
+	@media (min-width: map-get($grid-breakpoints, lg)){
+		.box-sumary{
+			width: 33%;
+			float: left;
+			position: relative;
+			min-height: 332px;
+		}
+		.box-progress{
+			width: 65%;
+			margin-left: 1.25%;
+			float: left;
+			position: relative;
+		}
+		.wavy-lines{
+			@include createColumn(12, 'lg');
+			margin-left: 0;
+		}
+		.client-hours{
+			width: 48%;
+			float: left;
+			position: relative;
+			margin-left: 0;
+			margin-bottom: 0;
+			min-height: 477px;
+		}
+		.total-overdue{
+			width: 48%;
+			float: left;
+			margin-left: 0;
+			position: relative;
+		}
+	}
+	@media (min-width: map-get($grid-breakpoints, xl)){
+		.box-sumary{
+			min-height: 468px;
+		}
+		.client-hours{
+			width: 33%;
+			float: left;
+			position: relative;
+			min-height: 477px;
+			margin-left: 0;
+		}
+		.total-overdue{
+			width: 32%;
+			float: left;
+			margin-left: 1.25%;
+			position: relative;
+			min-height: 477px;
+		}
+	}
+}
+	
+.section-title{
+	@extend .col-xs-12;
+	font-size: 1.2rem;
+	padding-right: 0;
+	padding-left: .5rem;
+	margin-bottom: 1rem;
+	.section-subtitle{
+		color: $body-font-color;
+		font-size: .825rem;
+		margin-top: .3rem;
+		padding-bottom: .7rem;
+		border-bottom: 2px solid $header-background-color;
+	}
+	.section-title-right{
+		display: none;
+
+	}
+	@media (min-width: map-get($grid-breakpoints, md)){
+		.section-title-right{
+			display: block;
+			text-align: right;
+			font-size: .8rem;
+			border-bottom: 2px solid $header-background-color;
+			height: 53px;
+			padding-right: 1rem;
+    		padding-top: 1rem;
+    		.container-days{
+    			background-color: $header-background-color;
+    			padding: .8rem 1.2rem;
+    			margin-left: .7rem;
+    			font-size: .8rem;
+    			border-radius: 50px;
+    		}
+		}
+		.section-title-right,
+		.section-title-left{
+			@include createColumn(6, 'md');
+		}
+	}
+	@media (min-width: map-get($grid-breakpoints, lg)){
+		margin: 2rem 0;
+	}
+}

@@ -1,0 +1,76 @@
+.menu{
+	width: 65%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: -65%;
+	max-width: 250px;
+	z-index: 2;
+	@include transition(left .2s);
+	background-color: $background-menu-color;
+	.menu-top{
+		background-color: $header-menu-background-color;
+		padding: .9rem 1.1rem;
+		text-align: center;
+		min-height: 64px;
+		.menu-title{
+			color: #FFF;
+			font-size: 1.3rem;
+			.menu-bold{
+				font-weight: bold;
+			}
+		}
+	}
+	.menu-list{
+		@extend .nav;
+		.menu-item{
+			@extend .nav-item;
+			.menu-link{
+				@extend .nav-link;
+				color: $font-menu-color;
+				padding: 1rem 0;
+				padding-left: 1.7rem;
+				display: block;
+				font-size: .9rem;
+				>i{
+					margin-right: .625rem;
+					font-size: 1.2rem;
+				}
+				&:hover{
+					color: #fff;
+					background-color: $hover-menu-color;
+				}
+			}
+
+			.menu-active{
+				background-color: $active-menu-color;
+				color: #fff;
+			}
+		}
+	}
+	@media(orientation:landscape){
+		overflow-y: scroll;
+	}
+	@media (min-width: map-get($grid-breakpoints, lg)){
+		overflow-y: initial;
+		left: 0;
+		max-width: 300px;
+		@include createColumn(3, 'lg');
+	}
+}
+
+.open-menu{
+	&:after{
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(0,0,0,.4);
+		z-index: 1;
+	}
+	.menu{
+		left: 0;
+	}
+}

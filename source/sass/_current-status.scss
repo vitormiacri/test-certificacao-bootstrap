@@ -1,0 +1,105 @@
+.section-current-status{
+	@extend .section-box-progress;
+}
+
+.box-current-status{
+	@extend .col-xs-12;
+	@extend .card;
+	padding-right: 0;
+	padding-left: 0;
+	.current-status-header{
+		@extend .card-block;
+		padding-left: 0;
+		padding-right: 0;
+		.project-img{
+			@extend .img-fluid;
+			@extend .col-xs-4;
+			max-width: 84px;
+			padding: 0 0 0 .5rem;
+		}
+		.container-project-text{
+			@extend .col-xs-8;
+			.project-title{
+				font-size: 1.5rem;
+				display: block;
+			}
+			.project-subtitle{
+				font-size: .8rem;
+				color: $body-font-color;
+			}
+			
+		}
+		@media (min-width: map-get($grid-breakpoints, md)){
+			@include createColumn(4, 'md');
+			padding-bottom: 0;
+		}
+		@media (min-width: map-get($grid-breakpoints, xl)){
+			@include createColumn(3, 'xl');
+			padding: .5rem;
+			.container-project-text{
+				margin-top: .5rem;
+			}
+		}
+
+	}
+	.current-status-body{
+		@extend .card-block;
+		text-align: center;
+		padding-top: 0;
+		.container-stats{
+			@extend .col-xs-12;
+			.project-time{
+				@extend .col-xs-6;
+				padding-left: 0;
+				padding-right: 0;
+				font-size: .8rem;
+				@media (min-width: map-get($grid-breakpoints, md)){
+					@include createColumn(6, 'md');
+				}
+			}
+			.project-stats{
+				@extend .col-xs-6;
+				font-size: .9rem;
+				padding-left: 0;
+				padding-right: 0;
+				>i{
+					color: $body-font-color;
+					font-size: 1rem;
+				}
+			}
+			@media (min-width: map-get($grid-breakpoints, md)){
+				@include createColumn(8, 'md');
+				padding-left: 4rem;
+				margin-top: 1rem;
+				max-height: 20px;
+				.project-stats{
+					border-left: 1px solid $body-font-color;
+					padding-right: 4rem;
+				}
+			}
+			@media (min-width: map-get($grid-breakpoints, xl)){
+				@include createColumn(6, 'xl');
+				margin-top: 1rem;
+			}
+
+		}
+		.progress{
+			height: .5rem;
+			@extend .col-xs-12;
+			padding-left: 0;
+			padding-right: 0;
+			margin-top: 1rem;
+			@media (min-width: map-get($grid-breakpoints, xl)){
+				@include createColumn(3, 'xl');
+				margin-top: 1.3rem;
+			}
+		}
+		@media (min-width: map-get($grid-breakpoints, md)){
+			padding-top: 1.25rem;
+		}
+		@media (min-width: map-get($grid-breakpoints, xl)){
+			padding-bottom: 0;
+		}	
+
+	}
+}
